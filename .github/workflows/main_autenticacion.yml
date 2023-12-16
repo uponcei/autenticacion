@@ -13,13 +13,13 @@ jobs:
   build:
     runs-on: windows-latest
     env:
-      AUTENTICACION_CLIENT_ID: ${{ authorization.server.client.id }}
-      AUTENTICACION_CLIENT_PASSWORD: ${{ authorization.server.client.password }}
-      AUTENTICACION_REDIRECT_URI: ${{ authorization.server.redirectUri }}
-      AUTENTICACION_ISSUER_URI: ${{ authorization.server.issuer }}
-      AUTENTICACION_USER_NAME: ${{ authorization.server.user.name }}
-      AUTENTICACION_USER_PASSWORD: ${{ authorization.server.user.password }}
-      AUTENTICACION_USER_ROL: ${{ authorization.server.user.rol }}
+      AUTENTICACION_CLIENT_ID: ${{ secrets.AUTENTICACION_CLIENT_ID }}
+      AUTENTICACION_CLIENT_PASSWORD: ${{ secrets.AUTENTICACION_CLIENT_PASSWORD }}
+      AUTENTICACION_REDIRECT_URI: ${{ secrets.AUTENTICACION_REDIRECT_URI }}
+      AUTENTICACION_ISSUER_URI: ${{ secrets.AUTENTICACION_ISSUER_URI }}
+      AUTENTICACION_USER_NAME: ${{ secrets.AUTENTICACION_USER_NAME }}
+      AUTENTICACION_USER_PASSWORD: ${{ secrets.AUTENTICACION_USER_PASSWORD }}
+      AUTENTICACION_USER_ROL: ${{ secrets.AUTENTICACION_USER_ROL }}
 
     steps:
       - uses: actions/checkout@v4
