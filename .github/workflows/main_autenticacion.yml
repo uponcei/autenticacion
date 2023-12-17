@@ -12,6 +12,13 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    env:
+      AUTENTICACION_CLIENT_ID: ${{ secrets.AUTENTICACION_CLIENT_ID }}
+      AUTENTICACION_CLIENT_PASSWORD: ${{ secrets.AUTENTICACION_CLIENT_PASSWORD }}
+      AUTENTICACION_REDIRECT_URI: ${{ secrets.AUTENTICACION_REDIRECT_URI }}
+      AUTENTICACION_USER_NAME: ${{ secrets.AUTENTICACION_USER_NAME }}
+      AUTENTICACION_USER_PASSWORD: ${{ secrets.AUTENTICACION_USER_PASSWORD }}
+      AUTENTICACION_USER_ROL: ${{ secrets.AUTENTICACION_USER_ROL }}
 
     steps:
       - uses: actions/checkout@v4
